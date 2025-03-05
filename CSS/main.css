@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.open-sans-Uniq {
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.m-plus-rounded-1c-regular {
+    font-family: "M PLUS Rounded 1c", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'M PLUS Rounded 1c', serif;
+    line-height: 1.6;
+    background-color: #EDF4ED;
+    font-size: 30;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 70px;
+    padding-top: 100px;
+}
+
+.small-logo {
+    width: 50px;
+    height: auto;
+    margin-left: 100px;
+}
+button{
+    font-family: "M PLUS Rounded 1c", serif;
+
+}
+.btn {
+    display: inline-block;
+    background: #44AF69;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.btn:hover {
+    background: #79B791;
+    transform: scale(1.1);
+    color: #333;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 9999;
+    background: #44AF69;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    transition: all 0.7s ease-in-out;
+    margin-right: 20px;
+}
+
+.navbar button:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-right: 150px;
+}
+
+.hero {
+    position: relative;
+    height: 750px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../img/back.jpg") no-repeat center center/cover;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+.hero h2,
+.hero p {
+    color: white;
+    margin-top: 40px;
+}
+
+.hero button {
+    margin-top: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+
+.card {
+    border: black;
+    transition: all 1s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card h3 {
+    margin-top: 10px;
+}
+
+.card p {
+    padding-bottom: 30px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.h2-name {
+    padding-bottom: 30px;
+}
+
+.consultation form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.consultation input,
+.consultation textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.consultation textarea {
+    resize: none;
+}
+
+.location iframe {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.contact p {
+    margin-bottom: 10px;
+}
+
+.mapmap {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    background: #44AF69;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 70px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s; 
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    opacity: 0; 
+    transition: opacity 0.5s;
+}
+
+.show-modal {
+    display: block;
+    opacity: 1; 
+}
+
+.fade-in {
+    animation: fadeIn 0.7s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
